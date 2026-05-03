@@ -1,0 +1,36 @@
+# secrets
+.env
+.env.*
+!.env.example
+!.env.enterprise.example
+TradingAgents/.env
+TradingAgents/.env.*
+!TradingAgents/.env.example
+!TradingAgents/.env.enterprise.example
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# data / results (large or generated files)
+phase1_results/
+phase2_results/
+phase3_results/
+submissions.csv
+AmazonReddit.csv
+amzn_gdelt_news_dec2023_jan2024.csv
+
+# OS / editor temp files
+.DS_Store
+Thumbs.db
+~$*
+
+# IDE
+.vscode/
+.idea/

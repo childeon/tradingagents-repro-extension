@@ -1,0 +1,8 @@
+# TradingAgents framework (install from cloned repo or directly from GitHub)
+# pip install -e ./TradingAgents
+# OR: git+https://github.com/TauricResearch/TradingAgents.git
+
+python-dotenv
+yfinance
+pandas
+numpy

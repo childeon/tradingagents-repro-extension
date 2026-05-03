@@ -1,0 +1,9 @@
+{
+  "AMZN": {
+    "cumulative_return_pct": -1.33,
+    "annualized_return_pct": -14.84,
+    "sharpe_ratio": -0.771,
+    "max_drawdown_pct": -4.81,
+    "n_trading_days": 21
+  }
+}
