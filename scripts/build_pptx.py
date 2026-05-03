@@ -6,7 +6,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 import os
 
-BASE    = os.path.dirname(os.path.abspath(__file__))
+BASE    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS = os.path.join(BASE, "phase1_results")
 ASSETS  = os.path.join(BASE, "TradingAgents", "assets")
 
@@ -235,9 +235,10 @@ def slide_reproduction(prs):
          "Running in 2026, the API returned 2026 filings — not 2024 as needed for the backtest.",
          "Fix: Manually downloaded the Q3 2023 10-Q and cached it for the entire backtest window."),
         (BLUE,
-         "Challenge 2 — News API Ordering Bug",
-         "yfinance returns news chronologically-latest first, then filters by date. Running in 2026 "
-         "with a 2024 date filter returned zero results — the filter ran after the API cutoff, not before.",
+         "Challenge 2 — Data Pipeline Gap + News API Bug",
+         "Paper's experiments used a curated dataset (Bloomberg, EODHD, FinnHub, Reddit) — not released "
+         "with the code. The open-source fallback, yfinance, returns 2025–26 articles when queried in 2026, "
+         "leaving the News Analyst with zero relevant input for a Jan 2024 backtest.",
          "Fix: Replaced live API calls with pre-filtered static GDELT + Reddit CSV datasets for Jan 2024."),
         (RGBColor(0x44, 0x72, 0xC4),
          "Challenge 3 — Latency",
